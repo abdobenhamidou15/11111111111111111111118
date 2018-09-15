@@ -46,51 +46,51 @@ client.on("message", message => {
 ~~╚[❖══════❖]╝
 ╔[❖══════❖]╗~~
 :crown:اوامر ادارية:crown: 
-**╚:crown:❖Mbc = يرسل رسالة للكل
-╚:crown:❖Mkick = لطرد عضو مع السبب
-╚:crown:❖Mcc = يسوي لك 10 الوان
-╚:crown:❖Mmutech = لتقفيل الشات محد يكتب به
-╚:crown:❖Munmutech = لفتح الشات**
+**╚:crown:❖$$bc = يرسل رسالة للكل
+╚:crown:❖$$kick = لطرد عضو مع السبب
+╚:crown:❖$$cc = يسوي لك 10 الوان
+╚:crown:❖$$mutech = لتقفيل الشات محد يكتب به
+╚:crown:❖$$unmutech = لفتح الشات**
 ~~╚[❖══════❖]╝
 ╔[❖══════❖]╗~~
 :earth_africa:أوامر عامة:earth_asia: 
-**╚:earth_africa:❖Minv = لاعطائك رابط اضافة البوت
-╚:earth_africa:❖Mbot = معلومات البوت
-╚:earth_africa:❖Mping = يعطيك بنقك
-╚:earth_africa:❖Mimage = صورة السيرفر
-╚:earth_africa:❖Mavatar = يعطيك صورتك أو صورة الي تمنشنه
-╚:earth_africa:❖Mid = معلومات حسابك
-╚:earth_africa:❖Mmsg = لارسال رسالة للشخص
-╚:earth_africa:❖Mreport = للتبليغ عن شخص
-╚:earth_africa:❖Mallbots = لمعرفة كل البوتات الي بالسيرفر
-╚:earth_africa:❖Musers = لمعرفة السيرفرات ومستخدمين البوت
-╚:earth_africa:❖Mserver = معلومات السيرفر**
+**╚:earth_africa:❖$$inv = لاعطائك رابط اضافة البوت
+╚:earth_africa:❖$$bot = معلومات البوت
+╚:earth_africa:❖$$ping = يعطيك بنقك
+╚:earth_africa:❖$$image = صورة السيرفر
+╚:earth_africa:❖$$avatar = يعطيك صورتك أو صورة الي تمنشنه
+╚:earth_africa:❖$$id = معلومات حسابك
+╚:earth_africa:❖$$msg = لارسال رسالة للشخص
+╚:earth_africa:❖$$report = للتبليغ عن شخص
+╚:earth_africa:❖$$allbots = لمعرفة كل البوتات الي بالسيرفر
+╚:earth_africa:❖$$users = لمعرفة السيرفرات ومستخدمين البوت
+╚:earth_africa:❖$$server = معلومات السيرفر**
 ~~╚[❖══════❖]╝
 ╔[❖══════❖]╗~~
 :video_game:الألعاب:video_game: 
-**╚:video_game:❖Mhack 
+**╚:video_game:❖$$hack 
 لخداع صديقك انك هكرته
-╚:video_game:❖Mمريم
+╚:video_game:❖$$مريم
 لعبة مريم
-╚:video_game:❖Mصراحة
+╚:video_game:❖$$صراحة
 لعبة صراحة
-╚:video_game:❖Mmine
+╚:video_game:❖$$mine
 اسئلة ماين كرافتية
 ╚:video_game:❖MFort
 اسئلة عن فورت نايت
-╚:video_game:❖Mfkk
+╚:video_game:❖$$fkk
 لعبة فكك
-╚:video_game:❖Mلغز
+╚:video_game:❖$$لغز
 يعطيك لغز والذكي يحله
-╚:video_game:❖Mxo
+╚:video_game:❖$$xo
 لعبة xo
-╚:video_game:❖Ma3lam
+╚:video_game:❖$$a3lam
 يعطيك علم وانت احزر وش هو
-╚:video_game:❖M3wasm
+╚:video_game:❖$$3wasm
 لعبة عواصم
-╚:video_game:❖Mلوخيروك
+╚:video_game:❖$$لوخيروك
 لعبة لو خيروك
-╚:video_game:❖Mعقاب
+╚:video_game:❖$$عقاب
 لعبة عقاب**
 ~~╚[❖══════❖]╝
 ╔[❖══════❖]╗ ~~
