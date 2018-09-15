@@ -25,7 +25,7 @@ client.user.setGame(`Nothing`,"http://twitch.tv/abdobenhamidou/")
 
 
 client.on('ready', () => {                           
-client.user.setGame(``,'https://www.twitch.tv/abdobenhamidou/');                                                                                                                                                                                                                                                                                                                                                                                                                             client.user.setGame(`Mhelp | Minv | ${client.guilds.size} Server`,'https://www.twitch.tv/v5bz');
+client.user.setGame(``,'https://www.twitch.tv/abdobenhamidou/');                                                                                                                                                                                                                                                                                                                                                                                                                             client.user.setGame(`$$help  ${client.guilds.size} Server`,'https://www.twitch.tv/abdobenhamidou/');
 }); 
 
 
