@@ -41,73 +41,72 @@ client.on("message", message => {
       .setColor("#00ff47")
       .setThumbnail(message.author.avatarURL)
       .setDescription(`
-~~╔[❖══════❖]╗~~
-**شكرا لاستخــــ:hearts:ــدام البوت**
-~~╚[❖══════❖]╝
-╔[❖══════❖]╗~~
+╔[❖══════❖]╗
+  Thanks for Use :hearts:
+╚[❖══════❖]╝
+╔[❖══════❖]╗
 :crown:اوامر ادارية:crown: 
-**╚:crown:❖$$bc = يرسل رسالة للكل
+╚:crown:❖$$bc = يرسل رسالة للكل
 ╚:crown:❖$$kick = لطرد عضو مع السبب
 ╚:crown:❖$$cc = يسوي لك 10 الوان
 ╚:crown:❖$$mutech = لتقفيل الشات محد يكتب به
-╚:crown:❖$$unmutech = لفتح الشات**
-~~╚[❖══════❖]╝
-╔[❖══════❖]╗~~
+╚:crown:❖$$unmutech = لفتح الشات
+╚[❖══════❖]╝
+╔[❖══════❖]╗
 :earth_africa:أوامر عامة:earth_asia: 
-**╚:earth_africa:❖$$inv = لاعطائك رابط اضافة البوت
-╚:earth_africa:❖$$bot = معلومات البوت
-╚:earth_africa:❖$$ping = يعطيك بنقك
-╚:earth_africa:❖$$image = صورة السيرفر
-╚:earth_africa:❖$$avatar = يعطيك صورتك أو صورة الي تمنشنه
-╚:earth_africa:❖$$id = معلومات حسابك
-╚:earth_africa:❖$$msg = لارسال رسالة للشخص
-╚:earth_africa:❖$$report = للتبليغ عن شخص
-╚:earth_africa:❖$$allbots = لمعرفة كل البوتات الي بالسيرفر
-╚:earth_africa:❖$$users = لمعرفة السيرفرات ومستخدمين البوت
-╚:earth_africa:❖$$server = معلومات السيرفر**
-~~╚[❖══════❖]╝
-╔[❖══════❖]╗~~
+╚:earth_africa:❖$$inv = To give the link invite bot
+╚:earth_africa:❖$$bot = Bot Information
+╚:earth_africa:❖$$ping = Give you a bang
+╚:earth_africa:❖$$image = The image of the server
+╚:earth_africa:❖$$avatar = Give you your picture or a picture of your wish
+╚:earth_africa:❖$$id = Your account information
+╚:earth_africa:❖$$msg = To send a message to the person
+╚:earth_africa:❖$$report = To report a person
+╚:earth_africa:❖$$allbots = To know all the bots to the server
+╚:earth_africa:❖$$users = To know servers and bot users
+╚:earth_africa:❖$$server = Server Information
+╚[❖══════❖]╝
+╔[❖══════❖]╗
 :video_game:الألعاب:video_game: 
-**╚:video_game:❖$$hack 
-لخداع صديقك انك هكرته
-╚:video_game:❖$$مريم
-لعبة مريم
-╚:video_game:❖$$صراحة
-لعبة صراحة
+╚:video_game:❖$$hack 
+To fool your friend you are hack him
+╚:video_game:❖$$Mary
+Game of Mary
+╚:video_game:❖$$expressly
+Game expressly
 ╚:video_game:❖$$mine
-اسئلة ماين كرافتية
+Maine Craft Questions
 ╚:video_game:❖MFort
-اسئلة عن فورت نايت
-╚:video_game:❖$$fkk
-لعبة فكك
-╚:video_game:❖$$لغز
-يعطيك لغز والذكي يحله
+QUESTIONS ABOUT FORTNIGHT
+╚:video_game:❖$$decoding
+Game decoding
+╚:video_game:❖$$puzzle
+Gives you the puzzle and the clever solves it
 ╚:video_game:❖$$xo
-لعبة xo
+game xo
 ╚:video_game:❖$$a3lam
-يعطيك علم وانت احزر وش هو
+Give you a flag and you guess and it is
 ╚:video_game:❖$$3wasm
-لعبة عواصم
-╚:video_game:❖$$لوخيروك
-لعبة لو خيروك
-╚:video_game:❖$$عقاب
-لعبة عقاب**
-~~╚[❖══════❖]╝
-╔[❖══════❖]╗ ~~
+Game capitals
+╚:video_game:❖$$if they made you choose
+game : if they made you choose
+╚:video_game:❖$$ punishment (warn]
+game punishment
+╚[❖══════❖]╝
+╔[❖══════❖]╗ 
 :sunglasses:الترحيب:sunglasses:
-سوي روم اسمه
-welcome 
-اوor
-『الترحيب』
-وبس
-~~╚[❖══════❖]╝
-╔[❖══════❖]╗~~
-:headphones:أوامر الأغاني:headphones:
-╚:headphones:❖Mmusic
-كل الأوامر هنا
-~~╚[❖══════❖]╝
-╔[❖══════❖]╗~~
-__╚[❖══════❖]╝__
+make room name welcome 
+ or
+『Welcome』
+and Only
+╚[❖══════❖]╝
+╔[❖══════❖]╗
+:headphones:Song orders: :headphones:
+╚:headphones:❖$$music
+All commands are here
+╚[❖══════❖]╝
+╔[❖══════❖]╗
+╚[❖══════❖]╝
 `)
 
 
