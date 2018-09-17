@@ -28,18 +28,15 @@ client.on('ready', () => {
 client.user.setGame(``,'https://www.twitch.tv/abdobenhamidou/');                                                                                                                                                                                                                                                                                                                                                                                                                             client.user.setGame(`$$help  ${client.guilds.size} Server`,'https://www.twitch.tv/abdobenhamidou/');
 }); 
 
-client.on('message', message => {
-	if(message.content.startsWith(prefix + 'invite')) {
-	if(message.author.bot) return;
-	if(message.channel.type === 'dm') return;
-        if (message.content === "nvite") {
-        let embed = new Discord.RichEmbed()
-        .setAuthor(` ${message.author.username} `, message.author.avatarURL)      
-        .setTitle(`:small_orange_diamond: Click Here `)
-        .setURL(`https://discordapp.com/oauth2/authorize?client_id=489492316403531797&scope=bot&permissions=2146958847`)        
-     message.channel.sendEmbed(embed);
-       }
-   }); 
+    client.on('message', message => {
+        if(message.content.startsWith('invite')) {
+            let embed = new Discord.RichEmbed()
+            .setAuthor(` ${message.author.username} `, message.author.avatarURL)      
+            .setTitle(`:small_orange_diamond: Click Here `)
+            .setURL(`https://discordapp.com/oauth2/authorize?client_id=489492316403531797&scope=bot&permissions=2146958847`)        
+         message.channel.sendEmbed(embed);
+           }
+       }); 
 
 client.on("message", message => {
  if (message.content === prefix + "help") {
