@@ -29,7 +29,7 @@ client.user.setGame(``,'https://www.twitch.tv/abdobenhamidou/');                
 }); 
 
     client.on('message', message => {
-        if(message.content.startsWith('invite')) {
+        if(message.content.startsWith('$$invite')) {
             let embed = new Discord.RichEmbed()
             .setAuthor(` ${message.author.username} `, message.author.avatarURL)      
             .setTitle(`:small_orange_diamond: Click Here `)
