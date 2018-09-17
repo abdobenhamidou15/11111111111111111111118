@@ -28,7 +28,18 @@ client.on('ready', () => {
 client.user.setGame(``,'https://www.twitch.tv/abdobenhamidou/');                                                                                                                                                                                                                                                                                                                                                                                                                             client.user.setGame(`$$help  ${client.guilds.size} Server`,'https://www.twitch.tv/abdobenhamidou/');
 }); 
 
-
+client.on('message', message => {
+	if(message.content.startsWith(prefix + 'invite')) {
+	if(message.author.bot) return;
+	if(message.channel.type === 'dm') return;
+        if (message.content === "nvite") {
+        let embed = new Discord.RichEmbed()
+        .setAuthor(` ${message.author.username} `, message.author.avatarURL)      
+        .setTitle(`:small_orange_diamond: Click Here `)
+        .setURL(`https://discordapp.com/oauth2/authorize?client_id=489492316403531797&scope=bot&permissions=2146958847`)        
+     message.channel.sendEmbed(embed);
+       }
+   }); 
 
 client.on("message", message => {
  if (message.content === prefix + "help") {
@@ -122,14 +133,8 @@ client.on('message' , async (message) => {
        if(message.content.startsWith(`<@${client.user.id}>`)) {
               message.channel.startTyping()
  let responses = [
-        'تحتاج مساعدة جرب Mhelp',
-        'هلا امرني',
-        'تحبني؟',
-         'طفشان عندك نكتة؟',
-         'تمنشن بوت؟',
-         'اعجبك البوت',
-         'لا تنسى تزور سيرفر السبورت',
-       'احبك ياخي'
+        'You want help',
+        'try $$help'
     ]
     
     // Fetch a random item from the array
@@ -260,7 +265,7 @@ let cdseconds = 5;
 if(!message.content.startsWith(prefix)) return;
   if(cooldown.has(message.author.id)){
     message.delete();
-  return  message.reply("الصبر يا أخي")
+  return  message.reply("reason")
   }
   if(!message.member.hasPermission("ADMINISTRATOR")){
     cooldown.add(message.author.id);
@@ -274,7 +279,7 @@ setTimeout(() => {
 client.on('message', message => {
     if(message.content === prefix + 'cc') {
                          if(!message.channel.guild) return message.channel.send('**._.**'); 
-         if(!message.member.hasPermission('MANAGE_ROLES')) return    message.channel.send('**ماعند البرمشن المطلوب**').then(msg => msg.delete(6000))
+         if(!message.member.hasPermission('MANAGE_ROLES')) return    message.channel.send('you need prem MANAGE ROLES').then(msg => msg.delete(6000))
       message.guild.createRole({
                   name: "1",
                     color: "#000501",
@@ -328,7 +333,7 @@ client.on('message', message => {
 
 
           message.channel.sendMessage({embed: new Discord.RichEmbed()
-     .setColor('#28ff00').setAuthor(`${message.author.username}'`, message.author.avatarURL).setDescription('**تمت المهمة**')});
+     .setColor('#28ff00').setAuthor(`${message.author.username}'`, message.author.avatarURL).setDescription('done')});
     }
 	});
 
@@ -728,29 +733,29 @@ client.on("message", message => {
       .setDescription(`
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 ${prefix}play
-لتشغيل أغنية باسم أو رابط
+to play any soong
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 ${prefix}vol
-لتغيير درجة الصوت
+To change the volume
 1-100
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 ${prefix}pause 
-لايقاف الاغنية مؤقتا
+To pause the song
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 ${prefix}resume
-لتشغيل الاغنية بعد ايقافها مؤقتا
+Play the song after pausing it
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 ${prefix}np
-لمعرفة الاغنية الحالية
+To see the current song
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 ${prefix}queue
-لمعرفة قائمة التشغيل
+To see the playlist
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 ${prefix}skip
-لتجاوز الاغنية الحالية
+to skipe a next song
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 ${prefix}stop
-لاخراج البوت من الروم
+if you want stopprd the song
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 `)//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
    message.channel.sendEmbed(embed)//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
