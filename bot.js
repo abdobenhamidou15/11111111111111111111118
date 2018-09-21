@@ -445,6 +445,7 @@ client.on('guildMemberAdd', member => {
                                      .addField(' server', `${member.guild.name}`,true)
                                        
 
+                                    });
 
 
 client.on("guildMemberAdd", member => {
