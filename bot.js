@@ -54,14 +54,14 @@ client.on("message", message => {
 ╚[❖══════❖]╝
 ╔[❖══════❖]╗
 :crown:اوامر ادارية:crown: 
-╚:crown:❖$$bc = يرسل رسالة للكل
-╚:crown:❖$$kick = لطرد عضو مع السبب
-╚:crown:❖$$cc = يسوي لك 10 الوان
-╚:crown:❖$$mutech = لتقفيل الشات محد يكتب به
-╚:crown:❖$$unmutech = لفتح الشات
+╚:crown:❖$$bc = Sends a message to everyone
+╚:crown:❖$$kick = kick member
+╚:crown:❖$$cc = make 10 colors
+╚:crown:❖$$mutech = close chat
+╚:crown:❖$$unmutech = open chat
 ╚[❖══════❖]╝
 ╔[❖══════❖]╗
-:earth_africa:أوامر عامة:earth_asia: 
+:earth_africa: commands :earth_asia: 
 ╚:earth_africa:❖$$inv = To give the link invite bot
 ╚:earth_africa:❖$$bot = Bot Information
 ╚:earth_africa:❖$$ping = Give you a bang
@@ -75,7 +75,7 @@ client.on("message", message => {
 ╚:earth_africa:❖$$server = Server Information
 ╚[❖══════❖]╝
 ╔[❖══════❖]╗
-:video_game:الألعاب:video_game: 
+:video_game: Games :video_game: 
 ╚:video_game:❖$$hack 
 To fool your friend you are hack him
 ╚:video_game:❖$$Mary
@@ -102,7 +102,7 @@ game : if they made you choose
 game punishment
 ╚[❖══════❖]╝
 ╔[❖══════❖]╗ 
-:sunglasses:الترحيب:sunglasses:
+:sunglasses: Welcomer :sunglasses:
 make room name welcome 
  or
 『Welcome』
@@ -338,9 +338,9 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === "$$mutech") {
-                        if(!message.channel.guild) return message.reply('**الأمر ذا بس للسيرفرات._.**');
+                        if(!message.channel.guild) return message.reply('**this command for servers only._.**');
 
-if(!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply('**ما عندك صلاحيات._.**');
+if(!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply('**This command for admins only**');
            message.channel.overwritePermissions(message.guild.id, {
          SEND_MESSAGES: false
 
@@ -350,9 +350,9 @@ if(!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply('**م�
              }
 
 if (message.content === "$$unmutech") {
-    if(!message.channel.guild) return message.reply('**الأمر ذا بس للسيرفرات._.**');
+    if(!message.channel.guild) return message.reply('**xx**');
 
-if(!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply('**ما عندك صلاحيات._.**');
+if(!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply('**this command for admins only**');
            message.channel.overwritePermissions(message.guild.id, {
          SEND_MESSAGES: true
 
@@ -377,16 +377,16 @@ client.on('message', message => {
   let args = message.content.split(" ").slice(1);
 
   if (command == "kick") {
-               if(!message.channel.guild) return message.reply('**الأمر ذا بس للسيرفرات ._.**');
+               if(!message.channel.guild) return message.reply('**?**');
          
-  if(!message.guild.member(message.author).hasPermission("KICK_MEMBERS")) return message.reply("**ليس لديك البرمشن المطلوب**");
-  if(!message.guild.member(client.user).hasPermission("KICK_MEMBERS")) return message.reply("**ليس لدي البرمشن المطلوب**");
+  if(!message.guild.member(message.author).hasPermission("KICK_MEMBERS")) return message.reply("**This command for admins**");
+  if(!message.guild.member(client.user).hasPermission("KICK_MEMBERS")) return message.reply("**Bot dont have Permission**");
   let user = message.mentions.users.first();
   let reason = message.content.split(" ").slice(2).join(" ");
-  if (message.mentions.users.size < 1) return message.reply("**:innocent:منشن:innocent:**");
-  if(!reason) return message.reply ("**:innocent:سبب الطرد:innocent:**");
+  if (message.mentions.users.size < 1) return message.reply("**:innocent: User :innocent:**");
+  if(!reason) return message.reply ("**:innocent:Reson kick:innocent:**");
   if (!message.guild.member(user)
-  .kickable) return message.reply("**الشخص أعلى من رتبتي يرجى رفع رتبتي**");
+  .kickable) return message.reply("**اBot dont have Permission**");
 
   message.guild.member(user).kick();
 
@@ -394,9 +394,9 @@ client.on('message', message => {
   .setAuthor(`انطرد`, user.displayAvatarURL)
   .setColor("#ff0005")
   .setTimestamp()
-  .addField("**المطرود:**",  '**[ ' + `${user.tag}` + ' ]**')
-  .addField("**الي طرده:**", '**[ ' + `${message.author.tag}` + ' ]**')
-  .addField("**السبب:**", '**[ ' + `${reason}` + ' ]**')
+  .addField("**User:**",  '**[ ' + `${user.tag}` + ' ]**')
+  .addField("**Kicked by:**", '**[ ' + `${message.author.tag}` + ' ]**')
+  .addField("**reason:**", '**[ ' + `${reason}` + ' ]**')
   message.channel.send({
     embed : kickembed
   })
@@ -408,16 +408,16 @@ client.on('message', message => {
     var reason = message.content.split(' ').slice(2).join(' ');
     if(message.content.startsWith(prefix + 'report')) {
         if(message.author.bot) return;
-        if(!message.guild.channels.find('name', 'الابلاغات')) return message.channel.send('**نرجوا عمل روم باسم الابلاغات كي توصل الابلاغات له**').then(msg => msg.delete(5000));
+        if(!message.guild.channels.find('name', 'reoprt')) return message.channel.send('create room named **report**').then(msg => msg.delete(5000));
     if(!name1) return message.reply('**:innocent:منشن:innocent:**').then(msg => msg.delete(3000))
         message.delete();
     if(!reason) return message.reply('**:innocent:وش سوى؟:innocent:**').then(msg => msg.delete(3000))
         message.delete();
     var abod = new Discord.RichEmbed()
-    .setTitle(`بلاغ من قبل: ${message.author.tag}`)
-    .addField('**المجرم:**', `${name1}`, true)
-    .addField('**بروم:**', `${message.channel.name}`, true)
-    .addField('**البلاغ:**', `${reason}`, true)
+    .setTitle(`User reported ${message.author.tag}`)
+    .addField('**User:**', `${name1}`, true)
+    .addField('**room:**', `${message.channel.name}`, true)
+    .addField('**Rep:**', `${reason}`, true)
     .setFooter(`${message.author.username}#${message.author.discriminator}`, message.author.avatarURL)
     .setTimestamp()
         message.guild.channels.find('name', 'الابلاغات').sendEmbed(abod)
@@ -429,56 +429,27 @@ client.on('message', message => {
 
 
 client.on('guildMemberAdd', member => {
-    let channel = member.guild.channels.find('name', 'welcome1');
-    let memberavatar = member.user.avatarURL
-      if (!channel) return;
-    let embed = new Discord.RichEmbed()
-        .setColor('#00ff47')
-        .setThumbnail(memberavatar)
-        .addField(':crown: | اسمك:  ',`${member}`)
-        .addField(':pencil:|اطلق من دخل' , `منور السيرفر, ${member}`)
-        .addField('🆔 |ايديك:', "**[" + `${member.id}` + "]**" )
-                .addField(':arrow_down:|عضو رقم',`${member.guild.memberCount}`)
-               
-                  .addField("Name:",`<@` + `${member.id}` + `>`, true)
-                     
-                                     .addField(' الـسيرفر', `${member.guild.name}`,true)
-                                       
-     .setFooter("Welcome")
-        .setTimestamp()
-   
-      channel.sendEmbed(embed);
-    });
-
-client.on('guildMemberAdd', member => {
     let channel = member.guild.channels.find('name', 'welcome');
     let memberavatar = member.user.avatarURL
       if (!channel) return;
     let embed = new Discord.RichEmbed()
         .setColor('#00ff47')
         .setThumbnail(memberavatar)
-        .addField(':crown: | اسمك:  ',`${member}`)
-        .addField(':pencil:|اطلق من دخل' , `منور السيرفر, ${member}`)
-        .addField('🆔 |ايديك:', "**[" + `${member.id}` + "]**" )
-                .addField(':arrow_down:|عضو رقم',`${member.guild.memberCount}`)
+        .addField(':crown: |Your name:  ',`${member}`)
+        .addField(':pencil:|bro' , `Welcome, ${member}`)
+        .addField('🆔 |ID:', "**[" + `${member.id}` + "]**" )
+                .addField(':arrow_down:|Member No',`${member.guild.memberCount}`)
                
                   .addField("Name:",`<@` + `${member.id}` + `>`, true)
                      
-                                     .addField(' الـسيرفر', `${member.guild.name}`,true)
+                                     .addField(' server', `${member.guild.name}`,true)
                                        
-     .setFooter("Welcome")
-        .setTimestamp()
-   
-      channel.sendEmbed(embed);
-    });
 
 
 
 client.on("guildMemberAdd", member => {
   member.createDM().then(function (channel) {
-  return channel.send(`:hearts:منور السيرفر:hearts:
-:crown:اسمك:crown: : ${member}  
-أنت العضو رقم: : ${member.guild.memberCount} `) 
+  return channel.send(`:hearts: Welcome :hearts: `) 
 }).catch(console.error)
 })
 
@@ -487,9 +458,7 @@ client.on('guildMemberRemove', member => {
     var embed = new Discord.RichEmbed()
     .setAuthor(member.user.username, member.user.avatarURL)
     .setThumbnail(member.user.avatarURL)
-    .setTitle(`راح ورح`)
-    .setDescription(`:hearts:...نراك قريبا:hearts:`)
-    .addField(':sweat:الباقي',`**[ ${member.guild.memberCount} ]**`,true)
+    .setDescription(`:hearts:...Goood bye:hearts:`)
     .setColor('RED')
     .setFooter(`Bye..`, '')
 
@@ -497,23 +466,6 @@ var channel =member.guild.channels.find('name', 'welcome')
 if (!channel) return;
 channel.send({embed : embed});
 });
-
-
-client.on('guildMemberRemove', member => {
-    var embed = new Discord.RichEmbed()
-    .setAuthor(member.user.username, member.user.avatarURL)
-    .setThumbnail(member.user.avatarURL)
-    .setTitle(`:sob:راح ورح:sob:`)
-    .setDescription(`:hearts:...نراك قريبا:hearts:`)
-    .addField(':sweat:الباقي',`**[${member.guild.memberCount}]**`,true)
-    .setColor('RED')
-    .setFooter(`Bye..`, '')
-
-var channel =member.guild.channels.find('name', '『الترحيب』')
-if (!channel) return;
-channel.send({embed : embed});
-});
-
 
 
 
@@ -545,7 +497,7 @@ client.on('message', async msg => { // eslint-disable-line
 //by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
 	if (command === `play`) {
 		const voiceChannel = msg.member.voiceChannel;
-		if (!voiceChannel) return msg.channel.send('يجب توآجد حضرتك بروم صوتي .');
+		if (!voiceChannel) return msg.channel.send('Go to voice channel first.');
 		const permissions = voiceChannel.permissionsFor(msg.client.user);
 		if (!permissions.has('CONNECT')) {
 			//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
@@ -567,7 +519,7 @@ client.on('message', async msg => { // eslint-disable-line
 				const video2 = await youtube.getVideoByID(video.id); // eslint-disable-line no-await-in-loop
 				await handleVideo(video2, msg, voiceChannel, true); // eslint-disable-line no-await-in-loop
 			}//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
-			return msg.channel.send(` **${playlist.title}** تم الإضآفة إلى قأئمة التشغيل`);
+			return msg.channel.send(` **${playlist.title}** Added`);
 		} else {
 			try {//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
 
@@ -577,7 +529,7 @@ client.on('message', async msg => { // eslint-disable-line
 					var videos = await youtube.searchVideos(searchString, 5);
 					let index = 0;
 					const embed1 = new Discord.RichEmbed()
-			        .setDescription(`**الرجآء من حضرتك إختيآر رقم المقطع** :
+			        .setDescription(`**chose member from 1 to 5** :
 ${videos.map(video2 => `[**${++index} **] \`${video2.title}\``).join('\n')}`)
 //by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
 					.setFooter("『ζ͜͡M Bot』")
@@ -592,32 +544,32 @@ ${videos.map(video2 => `[**${++index} **] \`${video2.title}\``).join('\n')}`)
 						});//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
 					} catch (err) {
 						console.error(err);
-						return msg.channel.send('لم يتم إختيآر مقطع صوتي');
+						return msg.channel.send('No soundtrack selected');
 					}
 					const videoIndex = parseInt(response.first().content);
 					var video = await youtube.getVideoByID(videos[videoIndex - 1].id);
 				} catch (err) {
 					console.error(err);
-					return msg.channel.send(':X: لا يتوفر نتآئج بحث ');
+					return msg.channel.send(':X:No search results available ');
 				}
 			}//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
 
 			return handleVideo(video, msg, voiceChannel);
 		}//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
 	} else if (command === `skip`) {
-		if (!msg.member.voiceChannel) return msg.channel.send('أنت لست بروم صوتي .');
-		if (!serverQueue) return msg.channel.send('لا يتوفر مقطع لتجآوزه');
-		serverQueue.connection.dispatcher.end('تم تجآوز هذآ المقطع');
+		if (!msg.member.voiceChannel) return msg.channel.send('Go to voice channel first .');
+		if (!serverQueue) return msg.channel.send('Where song');
+		serverQueue.connection.dispatcher.end('skkiped');
 		return undefined;
 	} else if (command === `stop`) {//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
-		if (!msg.member.voiceChannel) return msg.channel.send('أنت لست بروم صوتي .');
-		if (!serverQueue) return msg.channel.send('لا يتوفر مقطع لإيقآفه');
+		if (!msg.member.voiceChannel) return msg.channel.send('Go to voice channel first.');
+		if (!serverQueue) return msg.channel.send('where song');
 		serverQueue.songs = [];
-		serverQueue.connection.dispatcher.end('تم إيقآف هذآ المقطع');
+		serverQueue.connection.dispatcher.end('stopprd);
 		return undefined;
 	} else if (command === `vol`) {
-		if (!msg.member.voiceChannel) return msg.channel.send('أنت لست بروم صوتي .');
-		if (!serverQueue) return msg.channel.send('لا يوجد شيء شغآل.');
+		if (!msg.member.voiceChannel) return msg.channel.send('Go to voice channel first .');
+		if (!serverQueue) return msg.channel.send('Noth.');
 		if (!args[1]) return msg.channel.send(`:loud_sound: مستوى الصوت **${serverQueue.volume}**`);
 		serverQueue.volume = args[1];//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
 		serverQueue.connection.dispatcher.setVolumeLogarithmic(args[1] / 50);
