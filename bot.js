@@ -565,7 +565,7 @@ ${videos.map(video2 => `[**${++index} **] \`${video2.title}\``).join('\n')}`)
 		if (!msg.member.voiceChannel) return msg.channel.send('Go to voice channel first.');
 		if (!serverQueue) return msg.channel.send('where song');
 		serverQueue.songs = [];
-		serverQueue.connection.dispatcher.end('stopprd);
+		serverQueue.connection.dispatcher.end('stopprd');
 		return undefined;
 	} else if (command === `vol`) {
 		if (!msg.member.voiceChannel) return msg.channel.send('Go to voice channel first .');
