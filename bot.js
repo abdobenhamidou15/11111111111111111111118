@@ -428,46 +428,6 @@ client.on('message', message => {
 
 
 
-client.on('guildMemberAdd', member => {
-    let channel = member.guild.channels.find('name', 'welcome');
-    let memberavatar = member.user.avatarURL
-      if (!channel) return;
-    let embed = new Discord.RichEmbed()
-        .setColor('#00ff47')
-        .setThumbnail(memberavatar)
-        .addField(':crown: |Your name:  ',`${member}`)
-        .addField(':pencil:|bro' , `Welcome, ${member}`)
-        .addField('🆔 |ID:', "**[" + `${member.id}` + "]**" )
-                .addField(':arrow_down:|Member No',`${member.guild.memberCount}`)
-               
-                  .addField("Name:",`<@` + `${member.id}` + `>`, true)
-                     
-                                     .addField(' server', `${member.guild.name}`,true)
-                                       
-
-                                    });
-
-
-client.on("guildMemberAdd", member => {
-  member.createDM().then(function (channel) {
-  return channel.send(`:hearts: Welcome :hearts: `) 
-}).catch(console.error)
-})
-
-
-client.on('guildMemberRemove', member => {
-    var embed = new Discord.RichEmbed()
-    .setAuthor(member.user.username, member.user.avatarURL)
-    .setThumbnail(member.user.avatarURL)
-    .setDescription(`:hearts:...Goood bye:hearts:`)
-    .setColor('RED')
-    .setFooter(`Bye..`, '')
-
-var channel =member.guild.channels.find('name', 'welcome')
-if (!channel) return;
-channel.send({embed : embed});
-});
-
 
 
 
@@ -1442,6 +1402,41 @@ client.on('message', async msg => {
         }
 });
 
+
+client.on('guildMemberAdd', member => {
+let welcomer = member.guild.channels.find("name","welcome");
+if(!welcomer) return;
+if(welcomer) {
+ moment.locale('en-ly');
+ var abdob = member.user;
+let abdo = new Discord.RichEmbed()
+.setColor(member.guild.me.highestRole.color) 
+.setThumbnail(abdob.displayAvatarURL)
+.setAuthor(abdob.username,abdob.avatarURL)
+.setDescription(`:arrow_lower_right: ${member} joined the server`)
+.addField(':alarm_clock: Age of account :',`${moment(member.user.createdAt).format('D/M/YYYY h:mm a')} **\n** \`${moment(member.user.createdAt).fromNow()}\``,true)            
+.setFooter(`${abdob.tag}`,"https://images-ext-1.discordapp.net/external/UZGoDhJDKP6kHsb06okIQWCn1soJVUdOsRvu7184-SM/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/464139412251344897/f537769c6c17e31bb6969ef14c64ec61.png")
+.setTimestamp()
+welcomer.send(abdo);    
+}
+});
+
+client.on('guildMemberRemove', member => {
+  let welcomer = member.guild.channels.find("name","welcome");
+  if(!welcomer) return;
+  if(welcomer) {
+     moment.locale('en-ly');
+     var abdob = member.user;
+    let abdo = new Discord.RichEmbed()
+    .setColor(member.guild.me.highestRole.color) 
+    .setThumbnail(abdob.displayAvatarURL)
+    .setAuthor(abdob.username,abdob.avatarURL)
+    .setDescription(`:arrow_upper_left: ${member} left the server 👋`)
+    .setFooter(`${abdob.tag}`,"https://images-ext-1.discordapp.net/external/UZGoDhJDKP6kHsb06okIQWCn1soJVUdOsRvu7184-SM/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/464139412251344897/f537769c6c17e31bb6969ef14c64ec61.png")
+    .setTimestamp()
+ welcomer.send(abdo);          
+}
+});
 
 
 client.login(process.env.BOT_TOKEN);
