@@ -714,7 +714,7 @@ var mentionned = message.mentions.members.first();
  } else {
      h = message.member
  }
-moment.locale('ar-TN');
+moment.locale('en-en');
       var id = new  Discord.RichEmbed()
     .setColor("!0a0909")
     .setAuthor(message.author.username, message.author.avatarURL) 
