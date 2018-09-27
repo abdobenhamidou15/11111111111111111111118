@@ -692,7 +692,7 @@ client.on('message', message => {
   
   if (message.content.startsWith(prefix + "id")) {
       message.react("🆔") 
-  if(!message.channel.guild) return message.reply(`**__بس بالسيرفرات__**`);
+  if(!message.channel.guild) return message.reply(`this command for servers only`);
    message.guild.fetchInvites().then(invs => {
       let member = client.guilds.get(message.guild.id).members.get(message.author.id);
       let personalInvites = invs.filter(i => i.inviter.id === message.author.id);
@@ -718,12 +718,12 @@ moment.locale('ar-TN');
       var id = new  Discord.RichEmbed()
     .setColor("!0a0909")
     .setAuthor(message.author.username, message.author.avatarURL) 
-.addField('**تاريخ دخولك الدسكورد**:', `${moment(heg.createdTimestamp).format('YYYY/M/D HH:mm:ss')} **\n** \`${moment(heg.createdTimestamp).fromNow()}\`` ,true) 
-.addField('**تاريخ دخولك السيرفر**:', `${moment(h.joinedAt).format('YYYY/M/D HH:mm:ss')} \n \`${moment(h.joinedAt).fromNow()}\``, true)
-.addField("**اسمك**", `${message.author.username}`)
-.addField('**تاقك**', message.author.discriminator)
-.addField('**ايديك**', message.author.id)
-.setFooter("『معلوماتك』")  
+.addField('joined at:', `${moment(heg.createdTimestamp).format('YYYY/M/D HH:mm:ss')} **\n** \`${moment(heg.createdTimestamp).fromNow()}\`` ,true) 
+.addField('joined to server at:', `${moment(h.joinedAt).format('YYYY/M/D HH:mm:ss')} \n \`${moment(h.joinedAt).fromNow()}\``, true)
+.addField("Name", `${message.author.username}`)
+.addField('Discriminator', message.author.discriminator)
+.addField('ID', message.author.id)
+.setFooter("Your Info")  
     message.channel.sendEmbed(id);
 })
 }       
