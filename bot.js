@@ -38,90 +38,55 @@ client.user.setGame(``,'https://www.twitch.tv/abdobenhamidou/');                
            }
        }); 
 
-client.on("message", message => {
- if (message.content === prefix + "help") {
-      message.react("🇭") 
-      message.react("🇪") 
-      message.react("🇱") 
-      message.react("🇵") 
- message.channel.send(":ballot_box_with_check: Done! ")
-  const embed = new Discord.RichEmbed()
-      .setColor("#00ff47")
-      .setThumbnail(message.author.avatarURL)
-      .setDescription(`
-╔[❖══════❖]╗
-  Thanks for Use :hearts:
-╚[❖══════❖]╝
-╔[❖══════❖]╗
-:crown:اوامر ادارية:crown: 
-╚:crown:❖$$bc = Sends a message to everyone
-╚:crown:❖$$kick = kick member
-╚:crown:❖$$cc = make 10 colors
-╚:crown:❖$$mutech = close chat
-╚:crown:❖$$unmutech = open chat
-╚[❖══════❖]╝
-╔[❖══════❖]╗
-:earth_africa: commands :earth_asia: 
-╚:earth_africa:❖$$inv = To give the link invite bot
-╚:earth_africa:❖$$bot = Bot Information
-╚:earth_africa:❖$$ping = Give you a bang
-╚:earth_africa:❖$$image = The image of the server
-╚:earth_africa:❖$$avatar = Give you your picture or a picture of your wish
-╚:earth_africa:❖$$id = Your account information
-╚:earth_africa:❖$$msg = To send a message to the person
-╚:earth_africa:❖$$report = To report a person
-╚:earth_africa:❖$$allbots = To know all the bots to the server
-╚:earth_africa:❖$$users = To know servers and bot users
-╚:earth_africa:❖$$server = Server Information
-╚[❖══════❖]╝
-╔[❖══════❖]╗
-:video_game: Games :video_game: 
-╚:video_game:❖$$hack 
-To fool your friend you are hack him
-╚:video_game:❖$$Mary
-Game of Mary
-╚:video_game:❖$$expressly
-Game expressly
-╚:video_game:❖$$mine
-Maine Craft Questions
-╚:video_game:❖MFort
-QUESTIONS ABOUT FORTNIGHT
-╚:video_game:❖$$decoding
-Game decoding
-╚:video_game:❖$$puzzle
-Gives you the puzzle and the clever solves it
-╚:video_game:❖$$xo
-game xo
-╚:video_game:❖$$a3lam
-Give you a flag and you guess and it is
-╚:video_game:❖$$3wasm
-Game capitals
-╚:video_game:❖$$if they made you choose
-game : if they made you choose
-╚:video_game:❖$$ punishment (warn]
-game punishment
-╚[❖══════❖]╝
-╔[❖══════❖]╗ 
-:sunglasses: Welcomer :sunglasses:
-make room name welcome 
- or
-『Welcome』
-and Only
-╚[❖══════❖]╝
-╔[❖══════❖]╗
-:headphones:Song orders: :headphones:
-╚:headphones:❖$$music
-All commands are here
-╚[❖══════❖]╝
-╔[❖══════❖]╗
-╚[❖══════❖]╝
+              client.on("message", message => {
+                if (message.content === prefix + "help") {
+                     message.react("👍") 
+                 const embed = new Discord.RichEmbed()
+                     .setColor("#00ff47")
+                     .setDescription(`
+              commands admin
+❖$$bc = Sends a message to everyone
+❖$$kick = kick member
+❖$$cc = make 10 colors
+❖$$mutech = close chat
+❖$$unmutech = open chat
+
+              commands info
+❖$$inv = To give the link invite bot
+❖$$bot = Bot Information
+❖$$ping = Give you a bang
+❖$$image = The image of the server
+❖$$avatar = Give you your picture or a picture of your wish
+❖$$id = Your account information
+❖$$msg = To send a message to the person
+❖$$report = To report a person
+❖$$allbots = To know all the bots to the server
+❖$$users = To know servers and bot users
+❖$$server = Server Information
+
+              commands games
+❖$$hack 
+❖$$Mary
+❖$$expressly
+❖$$mine
+❖MFort
+❖$$decoding
+❖$$puzzle
+❖$$xo
+❖$$a3lam
+❖$$3wasm
+❖$$if they made you choose
+❖$$ punishment (warn]
+
+             command music
+❖$$music             
 `)
-
-
-message.author.sendEmbed(embed)
-  console.log('[Help] Send By: ' + message.author.username)
-}
-});
+               
+               
+               message.channel.sendEmbed(embed)
+                 console.log('[Help] Send By: ' + message.author.username)
+               }
+               });
 
 
 
