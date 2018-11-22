@@ -25,7 +25,7 @@ client.user.setGame(`Nothing`,"http://twitch.tv/abdobenhamidou/")
 
 
 client.on('ready', () => {                           
-client.user.setGame(`$$help  ${client.guilds.size} Server`);
+client.user.setGame(`$$help $$music`);
 }); 
 
     client.on('message', message => {
