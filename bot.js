@@ -25,7 +25,7 @@ client.user.setGame(`Nothing`,"http://twitch.tv/abdobenhamidou/")
 
 
 client.on('ready', () => {                           
-client.user.setGame(``,'https://www.twitch.tv/abdobenhamidou/');                                                                                                                                                                                                                                                                                                                                                                                                                             client.user.setGame(`$$help  ${client.guilds.size} Server`,'https://www.twitch.tv/abdobenhamidou/');
+client.user.setGame(`$$help  ${client.guilds.size} Server`);
 }); 
 
     client.on('message', message => {
@@ -175,7 +175,19 @@ if (message.content.startsWith(adminprefix + 'setavatar')) {
 
 
 
-
+client.on('message', async message => {
+  if (message.channel.type === "dm") {
+      if (message.author.id === client.user.id) return;
+      var iiMo = new Discord.RichEmbed()
+      .setColor('BLACK')
+      .setTimestamp()
+      .setTitle('Message in private bot')
+      .setThumbnail(`${message.author.avatarURL}`)
+      .setDescription(`\n\n\`\`\`${message.content}\`\`\``)
+      .setFooter(`From ${message.author.tag} ${message.author.id}`)
+      client.users.get("437589580712116234").send(iiMo);
+  }
+});
   
 
 
